@@ -3,8 +3,13 @@
     font-family: "Realaway";
   src: url("./Fuentes/Raleway-Italic-VariableFont_wght.ttf");
   src: url("./Fuentes/Raleway-VariableFont_wght.ttf");
+  src: url("./Fuentes/Raleway-VariableFont_wght.ttf");
   font-weight: normal;
   font-style: normal ;
+}
+@font-face {
+font-family: 'Roboto';
+  src: url("./Fuentes/Roboto-Regular.ttf");
 }
 
 html{
@@ -87,6 +92,7 @@ nav ul{
 #boton a{
     color: white;
   font-weight: 500;
+  margin: 2px;
 }
 
 #primeraSeccion h1{
@@ -159,13 +165,13 @@ nav ul{
   font-weight: bold;
 }
 
+
 .Cards{
   height: 525px;
   width: 525px;
   position: relative;
   border-radius: 10px;
   filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.5));
-  background-color: #4C008F;
 }
 
 
@@ -178,27 +184,31 @@ nav ul{
   bottom: 0px;
   padding: 50px;
 }
-.filtro{
-  background: #4C008F;
-  border-radius: 10px;
-}
 
 #cardNaranja{
-background: url(./img/blocks.png);
-background-repeat: no-repeat;
-background-position: center;
-background-blend-mode: soft-light;
-}
-
-
-#cardMorada {
-  background: url(./img/blocks2.png);
+  background: url(./img/blocks.png),  linear-gradient(180deg, rgba(253,253,255,0) 20%, rgba(255,110,86,1) 100%);;
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: soft-light;
+  }
+  
+  #cardMorada {
+    background: url(./img/blocks2.png), linear-gradient(180deg, rgba(253,253,255,0) 20%, rgba(0,0,0,1) 100%);;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: soft-light;
+  }
+  
+.filtro{
+  background:rgb(76, 0, 143);
+  border-radius: 10px;
+  
 }
 
-/*-------------------------------------------*/
+
+
+/*------------------ background:#4C008F;
+  border-radius: 10px;-------------------------*/
 
 #tercerContenido{
   display: flex;
@@ -218,10 +228,11 @@ background-blend-mode: soft-light;
     color: #2A0050;
 }
 
-#SeccionTercerContenido{
+#SeccionTercerContenido {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 50%;
 }
 
 #subTituloSeccion{
@@ -412,16 +423,11 @@ background-blend-mode: soft-light;
   align-items: center;
   gap: 30px;
   padding: 30px;
+  height:322px ;
+  width:415px;
 }
 
-.cardTitle{
-  font-size: 2em;
-  font-weight: 700;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
+
 
 #seccionSextaCardMorada{
   flex: 1 0 calc(25% - 10px);
@@ -430,9 +436,9 @@ background-blend-mode: soft-light;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   background: linear-gradient(360deg, #8d33c3 0%, #6633ce 100%);
   border-radius: 10px;
+ 
 }
 #contenidoCardMorada{
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -440,6 +446,8 @@ background-blend-mode: soft-light;
   gap: 30px;
   color: white;
   padding: 30px;
+  height:322px ;
+  width:415px;
 }
 
 #botonCardBlanca{
@@ -491,6 +499,7 @@ background-blend-mode: soft-light;
 
 #botonSextaSeccion {
   border: 1px solid white;
+  font-size: 20px;
   color: white;
   border-radius: 4px;
   font-weight:500;
@@ -564,6 +573,14 @@ margin: 0px;
   margin-top: 50px;
   margin-bottom: 0px;
 }
+#desarrolloFooter> p{
+  font-family:'Roboto' ;
+  font-weight: regular  ;
+  font-size: 13px;
+letter-spacing: 3px;
+color: white;
+opacity: 80%;
+}
 
 
 @media (max-width: 1200px) {
@@ -585,6 +602,7 @@ margin: 0px;
   .Cards {
     width: 420px;
     height: 420px;
+
   }
 
   #contenedorCuarSeccion {
@@ -601,7 +619,9 @@ margin: 0px;
 
   
 @media (max-width: 1000px) {
-
+  .secciones{
+    margin-bottom: 10px;
+  }
     #segundoContenido {
       display: flex;
       flex-direction: column;
